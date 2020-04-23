@@ -1,0 +1,185 @@
+<!DOCTYPE html> 
+<html> 
+      
+<head> 
+    <title> 
+        Simple Javascript Calculator 
+    </title> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+        <body> 
+    <div class = title > 
+        Simple JavaScript Calculator 
+    </div>  
+      
+    <form name = "calcy"> 
+          
+    <table id = "calcy" border = 2> 
+          
+    <tr> <!-- Display Region of calculator -->
+        <td colspan=5><input id="btn" name="display"
+            onkeypress="return event.charCode >= 48 
+            && event.charCode <= 57" type="text"> 
+        </td> 
+    </tr> 
+      
+    <tr> 
+        <td><input id="btn" type="button" value="1"
+                OnClick="calcy.display.value+='1'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="2"
+                OnClick="calcy.display.value+='2'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="3"
+                OnClick="calcy.display.value+='3'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="C"
+                OnClick="calcy.display.value=''"> 
+        </td> 
+        <!-- Backsapce has been represented by the Symbol <- -->
+        <td><input id="btn" type="button" value="<-"
+                OnClick="backspace(this.form)"> 
+        </td> 
+        <td><input id="btn" type="button" value="="
+                OnClick="calculate(this.form)"> 
+        </td> 
+    </tr> 
+      
+    <tr> 
+        <td><input id="btn" type="button" value="4"
+                OnClick="calcy.display.value+='4'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="5"
+                OnClick="calcy.display.value+='5'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="6"
+                OnClick="calcy.display.value+='6'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="-"
+                OnClick="calcy.display.value+='-'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="%"
+                OnClick="calcy.display.value+='%'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="cos"
+                OnClick="calcy.display.value='Math.cos('"> 
+        </td> 
+    </tr> 
+      
+    <tr> 
+        <td><input id="btn" type="button" value="7"
+                OnClick="calcy.display.value+='7'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="8"
+                OnClick="calcy.display.value+='8'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="9"
+                OnClick="calcy.display.value+='9'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="*"
+                OnClick="calcy.display.value+='*'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="n!"
+                OnClick="calcy.display.value+='!'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="sin"
+                OnClick="calcy.display.value='Math.sin('"> 
+        </td> 
+    </tr> 
+      
+    <tr> 
+        <td><input id="btn" type="button" value="."
+                OnClick="calcy.display.value+='.'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="0"
+                OnClick="calcy.display.value+='0'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value=","
+                OnClick="calcy.display.value+=','"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="+"
+                OnClick="calcy.display.value+='+'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="/"
+                OnClick="calcy.display.value+='/'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="tan"
+                OnClick="calcy.display.value='Math.tan('"> 
+        </td> 
+    </tr> 
+      
+    <tr> 
+        <td><input id="btn" type="button" value="E"
+                OnClick="calcy.display.value+='Math.E'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="pi"
+                OnClick="calcy.display.value+='Math.PI'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="^"
+                OnClick="calcy.display.value+='Math.pow('"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="("
+                OnClick="calcy.display.value+='('"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value=")"
+                OnClick="calcy.display.value+=')'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="log"
+                OnClick="calcy.display.value='Math.log('"> 
+        </td> 
+    </tr> 
+      
+    <tr> 
+        <td><input id="btn" type="button" value="sqrt"
+                OnClick="calcy.display.value+='Math.sqrt('"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="ln2"
+                OnClick="calcy.display.value+='Math.LN2'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="ln10"
+                OnClick="calcy.display.value+='Math.Log10'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="l2e"
+                OnClick="calcy.display.value+='Math.LOG2E'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="l10e"
+                OnClick="calcy.display.value+='Math.log10'"> 
+        </td> 
+          
+        <td><input id="btn" type="button" value="exp"
+                OnClick="calcy.display.value='Math.exp('"> 
+        </td> 
+    </tr> 
+    </table> 
+    </form> 
+</body> 
+  
+</html>                                
